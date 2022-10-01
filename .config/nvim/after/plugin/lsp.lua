@@ -49,9 +49,13 @@ local function config(_config)
     }, _config or {})
 end
 
-require("lspconfig").ccls.setup{}
+require("lspconfig").ccls.setup(config())
 
-require("lspconfig").cmake.setup{}
+require("lspconfig").cmake.setup(config())
+
+require("lspconfig").tsserver.setup(config({
+    single_file_support = true
+}))
 
 require("lspconfig").rust_analyzer.setup(config({
     cmd = { "rustup", "run", "nightly", "rust_analyzer" },
