@@ -9,14 +9,10 @@ return require('packer').startup(function()
 
     use "mbbill/undotree"
     use "sbdchd/neoformat"
-    use {
-        "nvim-lualine/lualine.nvim",
-        requires = { "kyazdani42/nvim-web-devicons", opt = true }
-    }
+    use ({'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}})
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
-    use "nvim-telescope/telescope-file-browser.nvim"
     use "nvim-lua/plenary.nvim"
     use "nvim-lua/popup.nvim"
 

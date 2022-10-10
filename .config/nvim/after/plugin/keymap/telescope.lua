@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<C-p>", ":lua require('telescope.builtin').git_files()<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>fb", ":lua require('telescope').extensions.file_browser.file_browser()<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>gs", ":lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
+-- vim.keymap.set("n", "<C-n>", ":lua require('telescope').extensions.file_browser.file_browser()<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>ps", ":lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>ff", ":lua require('telescope.builtin').find_files()<CR>", { noremap = true})
 vim.keymap.set("n", "<leader>fw", ":lua require('telescope.builtin').grep_string{ search = vim.fn.expand('<cword>') }<CR>", { noremap = true})
 vim.keymap.set("n", "<leader>bb", ":lua require('telescope.builtin').buffers()<CR>", { noremap = true})
