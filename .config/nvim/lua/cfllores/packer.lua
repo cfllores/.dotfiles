@@ -10,11 +10,11 @@ return require('packer').startup(function()
     use "mbbill/undotree"
     use "sbdchd/neoformat"
     use ({'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, after = "gruvbox" })
+    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use "nvim-lua/plenary.nvim"
-    use "nvim-lua/popup.nvim"
 
     -- LSP
     use "neovim/nvim-lspconfig"
