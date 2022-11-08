@@ -26,7 +26,7 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 10
 
-vim.opt.signcolumn = "number"
+vim.opt.signcolumn = "yes"
 
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"

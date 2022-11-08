@@ -38,4 +38,3 @@ local config = {
 }
 
 require('lualine').setup(config)
-require("bufferline").setup{}
