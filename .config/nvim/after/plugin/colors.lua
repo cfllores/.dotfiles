@@ -13,27 +13,10 @@ vim.cmd("highlight GruvboxAquaSign guibg=none")
 
 vim.cmd("highlight! link StatusLine Normal")
 
-local custom_gruvbox = require("lualine.themes.gruvbox")
-
-custom_gruvbox.normal.c.bg = nil
-custom_gruvbox.insert.c.bg = nil
-custom_gruvbox.command.c.bg = nil
-custom_gruvbox.visual.c.bg = nil
-
 local config = {
     options = {
-        theme = custom_gruvbox,
-        component_separators = '|',
-        section_separators = { left = '', right = '' },
-    },
-    sections = {
-        lualine_a = {
-            { 'mode', separator = { left = '' } },
-        },
-        lualine_x = {},
-        lualine_z = {
-            { 'location', separator = { right = '' } },
-        },
+        component_separators = '',
+        section_separators = '',
     },
 }
 

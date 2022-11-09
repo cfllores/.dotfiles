@@ -2,6 +2,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local cmp = require("cmp")
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local lspkind = require("lspkind")
 
 cmp.setup({
@@ -22,7 +23,7 @@ cmp.setup({
         ["<C-u>"] = cmp.mapping.scroll_docs(-4),
         ["<C-d>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<C-e>"] = cmp.mapping.abort(),
+        ["<Space>"] = cmp.mapping.abort(),
     }),
     sources = cmp.config.sources({
         { name = "nvim_lsp" },
@@ -31,6 +32,11 @@ cmp.setup({
         { name = "buffer" },
     })
 })
+
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
 
 local function config(_config)
     return vim.tbl_deep_extend("force", {
@@ -96,3 +102,27 @@ local opts = {
 }
 
 require("symbols-outline").setup(opts)
+
+-- Autopairs
+local npairs = require("nvim-autopairs")
+local Rule = require('nvim-autopairs.rule')
+
+npairs.setup({
+    check_ts = true,
+    ts_config = {
+        lua = {'string'},-- it will not add a pair on that treesitter node
+        javascript = {'template_string'},
+        java = false,-- don't check treesitter on java
+    }
+})
+
+local ts_conds = require('nvim-autopairs.ts-conds')
+
+
+-- press % => %% only while inside a comment or string
+npairs.add_rules({
+  Rule("%", "%", "lua")
+    :with_pair(ts_conds.is_ts_node({'string','comment'})),
+  Rule("$", "$", "lua")
+    :with_pair(ts_conds.is_not_ts_node({'function'}))
+})
