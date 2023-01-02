@@ -11,6 +11,7 @@ return require('packer').startup(function()
     use "sbdchd/neoformat"
     use ({'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, after = "gruvbox" })
     use "windwp/nvim-autopairs"
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"

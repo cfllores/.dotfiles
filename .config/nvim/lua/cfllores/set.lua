@@ -24,9 +24,9 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes:2"
 
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"

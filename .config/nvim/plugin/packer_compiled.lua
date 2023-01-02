@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/cfllores/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/cfllores/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/cfllores/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
