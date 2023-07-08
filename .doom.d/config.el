@@ -40,8 +40,8 @@
 (setq doom-theme 'doom-gruvbox)
 ;; (setq doom-gruvbox-dark-variant "hard")
 
-(set-frame-parameter (selected-frame) 'alpha '(93))
-(add-to-list 'default-frame-alist '(alpha . (93)))
+(set-frame-parameter (selected-frame) 'alpha '(98))
+(add-to-list 'default-frame-alist '(alpha . (98)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -51,8 +51,11 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-(setq projectile-project-search-path '("~/Development/"))
+(setq projectile-project-search-path '("~/Development/" "~/Documents"))
 (setq projectile-enable-caching nil)
+
+(setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
+(setq exec-path (append exec-path '("/Library/TeX/texbin/")))
 
 (after! lsp-rust
   (setq lsp-rust-server 'rust-analyzer))
