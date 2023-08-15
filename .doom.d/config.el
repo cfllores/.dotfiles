@@ -22,7 +22,7 @@
 ;; accept. For example:
 ;;
 (setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 14 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font Mono" :size 14))
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font Mono" :size 12))
 
 ;; (setq-default cursor-type 'bar)
 (setq global-hl-line-modes nil)
@@ -38,28 +38,31 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-gruvbox)
-(setq doom-gruvbox-dark-variant "hard")
+;; (setq doom-theme 'doom-gruvbox)
+;; (setq doom-gruvbox-dark-variant "hard")
+(setq doom-theme 'doom-tokyo-night)
 
-(set-frame-parameter (selected-frame) 'alpha '(98))
-(add-to-list 'default-frame-alist '(alpha . (98)))
+(set-frame-parameter (selected-frame) 'alpha '(90))
+(add-to-list 'default-frame-alist '(alpha . (90)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-(setq projectile-project-search-path '("~/Development/" "~/Documents"))
+(setq projectile-project-search-path '("~/Development/"))
 (setq projectile-enable-caching nil)
 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))
 
 (after! lsp-rust
-  (setq lsp-rust-server 'rust-analyzer))
+  (setq lsp-rust-server 'rust-analyzer)
+  (setq rustic-lsp-server 'rust-analyzer))
 
 (use-package! lsp-mode
   :config
