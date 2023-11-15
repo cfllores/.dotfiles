@@ -26,6 +26,7 @@
 
 ;; (setq-default cursor-type 'bar)
 (setq global-hl-line-modes nil)
+(setq-default tab-width 4)
 
 (setq mac-right-option-modifier 'meta
       ns-right-option-modifier 'meta)
@@ -40,10 +41,10 @@
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'doom-gruvbox)
 ;; (setq doom-gruvbox-dark-variant "hard")
-(setq doom-theme 'doom-tokyo-night)
+(setq doom-theme 'doom-one)
 
-(set-frame-parameter (selected-frame) 'alpha '(90))
-(add-to-list 'default-frame-alist '(alpha . (90)))
+(set-frame-parameter (selected-frame) 'alpha '(94))
+(add-to-list 'default-frame-alist '(alpha . (94)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
