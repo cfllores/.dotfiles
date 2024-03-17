@@ -39,12 +39,12 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-gruvbox)
 ;; (setq doom-gruvbox-dark-variant "hard")
-(setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-one)
 
-(set-frame-parameter (selected-frame) 'alpha '(94))
-(add-to-list 'default-frame-alist '(alpha . (94)))
+(set-frame-parameter (selected-frame) 'alpha '(98))
+(add-to-list 'default-frame-alist '(alpha . (98)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -60,6 +60,7 @@
 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))
+(setq +latex-viewers '(pdf-tools))
 
 (after! lsp-rust
   (setq lsp-rust-server 'rust-analyzer)
