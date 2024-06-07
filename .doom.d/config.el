@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 14 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font Mono" :size 12))
+(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 12 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font Mono" :size 10))
 
 ;; (setq-default cursor-type 'bar)
 (setq global-hl-line-modes nil)
