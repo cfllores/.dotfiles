@@ -34,6 +34,9 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
+;; Hide the menu for a minimalistic startup screen.
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
