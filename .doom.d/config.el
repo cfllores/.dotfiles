@@ -34,6 +34,12 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 
+;; Remove text from title bar.
+(setq frame-title-format nil)
+
+;; Set window transparency
+(set-frame-parameter (selected-frame) 'alpha '(96))
+
 ;; Hide the menu for a minimalistic startup screen.
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 
