@@ -51,6 +51,9 @@
 (setq evil-split-window-below t
       evil-vsplit-window-right t)
 
+;; Set path for projectile.
+(setq projectile-project-search-path '("~/Projects/"))
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
