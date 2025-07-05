@@ -58,6 +58,10 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(use-package! lsp-mode
+  :config
+  (setq lsp-lens-place-position 'above-line)
+  (setq lsp-inlay-hint-enable t))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
